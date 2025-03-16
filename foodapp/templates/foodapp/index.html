@@ -1,0 +1,29 @@
+{% extends "./base.html" %}
+{% load static %}
+
+{% block content %}
+<h3 style="font-weight: light; padding: 10px 0;">
+    Available Recipes
+</h3>
+
+<div class="dishicons">
+    {% for dish in dish_list %}
+    <div class="dishicon">
+        <a href="{% url 'foodapp:dishdetails' dish.id %}">
+            {% if dish.dish_image %}
+            <div class="dishimg">
+                <img src="{{ dish.dish_image.url }}" alt="{{ dish.dish_name }}">
+            </div>
+            {% endif %}
+            <div class="desc">
+                <h3 class="dishname">{{ dish.dish_name }}</h3>
+                <p class="dishdesc">{{ dish.dish_desc }}</p>
+            </div>
+        </a>
+    </div>
+    {% empty %}
+    <p>No dishes available.</p>
+    {% endfor %}
+</div>
+
+{% endblock %}
