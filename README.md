@@ -1,4 +1,4 @@
-# 🍽️ Food Recipe Manager App
+# Food Recipe Manager App
 
 ## Overview
 The **Food Recipe Manager App** is a Django-based web application that allows users to create, update, and manage recipes. Users can provide details such as the dish name, description, recipe instructions, dish type, and an image of the dish.
