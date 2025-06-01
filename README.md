@@ -1,20 +1,20 @@
 # 🍽️ Food Recipe Manager App
 
-## 📌 Overview
+## Overview
 The **Food Recipe Manager App** is a Django-based web application that allows users to create, update, and manage recipes. Users can provide details such as the dish name, description, recipe instructions, dish type, and an image of the dish.
 
-## 🚀 Features
+##  Features
 - Add new recipes with details
 - Edit and update existing recipes
 - Upload images for each recipe
 - Display recipes in a structured format
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - **Backend:** Django (Python)
 - **Frontend:** HTML, CSS
 - **Database:** SQLite (default, can be changed to PostgreSQL or MySQL)
 
-## 📂 Project Structure
+##  Project Structure
 ```
 food_recipe_manager/
 │── recipe_app/      # Main Django app
@@ -32,50 +32,50 @@ food_recipe_manager/
 │── manage.py       # Django management script
 ```
 
-## 🏗️ Installation and Setup
+## Installation and Setup
 
-### 1️⃣ Clone the repository
+###  Clone the repository
 ```bash
 git clone https://github.com/yourusername/food-recipe-manager.git
 cd food-recipe-manager
 ```
 
-### 2️⃣ Create and activate a virtual environment
+###  Create and activate a virtual environment
 ```bash
 python -m venv venv  # Create virtual environment
 source venv/bin/activate  # Mac/Linux
 venv\Scripts\activate  # Windows
 ```
 
-### 3️⃣ Install dependencies
+###  Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4️⃣ Apply database migrations
+###  Apply database migrations
 ```bash
 python manage.py migrate
 ```
 
-### 5️⃣ Create a superuser (for admin panel)
+###  Create a superuser (for admin panel)
 ```bash
 python manage.py createsuperuser
 ```
 Follow the prompts to set up a username and password.
 
-### 6️⃣ Run the development server
+### Run the development server
 ```bash
 python manage.py runserver
 ```
 Visit **http://127.0.0.1:8000/** in your browser.
 
-## 🖼️ Usage
+## Usage
 1. Open the application in your browser.
 2. Add new recipes using the form.
 3. Update existing recipes via the edit button.
 4. Upload images for each dish.
 
-## 🛠️ Troubleshooting
+##  Troubleshooting
 - If the form does not submit properly, ensure that `request.FILES` is handled in `views.py`:
   ```python
   form = DishForm(request.POST, request.FILES, instance=obj)
